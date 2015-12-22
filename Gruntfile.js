@@ -31,6 +31,18 @@ module.exports = function(grunt) {
           'dist/js/magic.min.js': ['src/js/magic.js', 'src/js/magic.js']
         }
       }
+    },
+
+    cssmin: {
+      options: {
+        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+      },
+
+      build: {
+        files: {
+          'dist/css/style.min.css': 'src/css/style.css'
+        }
+      }
     }
 
   });

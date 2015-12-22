@@ -9,9 +9,11 @@ module.exports = function(grunt) {
   // ===========================================================================
   grunt.initConfig({
 
+
     // get the configuration info from package.json ----------------------------
     // this way we can use things like name and version (pkg.name)
     pkg: grunt.file.readJSON('package.json'),
+
 
     // all of our configuration will go here
     jshint: {
@@ -46,6 +48,8 @@ module.exports = function(grunt) {
     }
 
   });
+
+  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
 
   // ===========================================================================
   // LOAD GRUNT PLUGINS ========================================================
